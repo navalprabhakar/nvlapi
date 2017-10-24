@@ -15,12 +15,23 @@ public class CandidateDto implements Serializable {
 
 	private String name;
 
+	private String country;
+
 	public String getName() {
 		return name;
 	}
 
 	public CandidateDto withName(String name) {
 		this.name = name;
+		return this;
+	}
+
+	public String getCountry() {
+		return name;
+	}
+
+	public CandidateDto withCountry(String country) {
+		this.country = country;
 		return this;
 	}
 }
