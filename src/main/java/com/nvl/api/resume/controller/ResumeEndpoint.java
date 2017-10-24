@@ -24,6 +24,6 @@ public class ResumeEndpoint {
 	 */
 	@GetMapping(path = ResumeUri.OF)
 	public CandidateDto of() {
-		return new CandidateDto().withName("Naval Prabhakar");
+		return new CandidateDto().withName("Naval Prabhakar").withCountry("India");
 	}
 }
