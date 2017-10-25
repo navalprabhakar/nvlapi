@@ -2,7 +2,7 @@
  * @project NVL.API
  * @author navalprabhakar
  */
-package com.nvl.api.resume.controller;
+package com.nvl.api.resume;
 
 /**
  * The Enum ResumeUri.

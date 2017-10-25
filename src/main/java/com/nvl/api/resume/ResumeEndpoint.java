@@ -2,13 +2,13 @@
  * @project NVL.API
  * @author navalprabhakar
  */
-package com.nvl.api.resume.controller;
+package com.nvl.api.resume;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nvl.api.resume.dto.CandidateDto;
+import com.nvl.api.resume.personal.CandidateDto;
 
 /**
  * The Class ResumeEndpoint.
@@ -24,6 +24,6 @@ public class ResumeEndpoint {
 	 */
 	@GetMapping(path = ResumeUri.OF)
 	public CandidateDto of() {
-		return new CandidateDto().withName("Naval Prabhakar").withCountry("India");
+		return new CandidateDto.Builder().name("Naval Prabhakar").country("India").build();
 	}
 }
