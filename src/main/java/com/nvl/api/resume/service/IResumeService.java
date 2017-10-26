@@ -4,9 +4,13 @@
  */
 package com.nvl.api.resume.service;
 
+import com.nvl.api.common.service.IReadOnlyDataService;
+
 /**
  * The Interface IResumeService.
  */
-public interface IResumeService {
-	String getResume();
+public interface IResumeService extends IReadOnlyDataService<ResumeDto> {
+
+	ResumeDto getResume();
+
 }

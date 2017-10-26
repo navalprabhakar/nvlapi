@@ -7,6 +7,11 @@ package com.nvl.api.resume.personal.education;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.nvl.api.common.converter.CustomLocalDateDeserializer;
+import com.nvl.api.common.converter.CustomLocalDateSerializer;
+
 /**
  * The Class QualificationDto.
  */
@@ -16,8 +21,12 @@ public class QualificationDto implements Serializable {
 
 	private Degree degree;
 	private String institution;
-	private LocalDate degreeYear;
-	private Short percentage;
+
+	@JsonSerialize(using = CustomLocalDateSerializer.class)
+	@JsonDeserialize(using = CustomLocalDateDeserializer.class)
+	private LocalDate degreeDate;
+
+	private Float percentage;
 
 	public Degree getDegree() {
 		return degree;
@@ -35,55 +44,20 @@ public class QualificationDto implements Serializable {
 		institution = aInstitution;
 	}
 
-	public LocalDate getDegreeYear() {
-		return degreeYear;
+	public LocalDate getDegreeDate() {
+		return degreeDate;
 	}
 
-	public void setDegreeYear(LocalDate aDegreeYear) {
-		degreeYear = aDegreeYear;
+	public void setDegreeDate(LocalDate aDegreeDate) {
+		degreeDate = aDegreeDate;
 	}
 
-	public Short getPercentage() {
+	public Float getPercentage() {
 		return percentage;
 	}
 
-	public void setPercentage(Short aPercentage) {
+	public void setPercentage(Float aPercentage) {
 		percentage = aPercentage;
-	}
-
-	/**
-	 * The Enum Degree.
-	 */
-	public static enum Degree {
-
-		MCA("MCA", "Master in Computer Applications"), BSCHCS("BSc(H)-CS",
-				"Bachelor of Science in Computer Science"), BSCHP("BSc(H)-PHY", "Bachelor of Science in Physics"), BAHM(
-						"BA(H)-MATHS", "Bachelor of Art in Mathematics"), XIIS("12-S", "Intermediate, Science"), XIIC(
-								"12-C", "Intermediate, Commerce"), XIIA("12-A", "Intermediate, Art"), X("10", "Board");
-
-		String code;
-		String name;
-
-		public String getCode() {
-			return code;
-		}
-
-		public void setCode(String aCode) {
-			code = aCode;
-		}
-
-		public String getName() {
-			return name;
-		}
-
-		public void setName(String aName) {
-			name = aName;
-		}
-
-		Degree(String aCode, String aName) {
-			code = aCode;
-			name = aName;
-		}
 	}
 
 	/**
@@ -92,13 +66,14 @@ public class QualificationDto implements Serializable {
 	public static class Builder {
 		private Degree degree;
 		private String institution;
-		private LocalDate degreeYear;
-		private Short percentage;
+		private LocalDate degreeDate;
+		private Float percentage;
 
 		/**
 		 * Degree.
 		 *
-		 * @param degree the degree
+		 * @param degree
+		 *            the degree
 		 * @return the builder
 		 */
 		public Builder degree(Degree degree) {
@@ -109,7 +84,8 @@ public class QualificationDto implements Serializable {
 		/**
 		 * Institution.
 		 *
-		 * @param institution the institution
+		 * @param institution
+		 *            the institution
 		 * @return the builder
 		 */
 		public Builder institution(String institution) {
@@ -120,21 +96,23 @@ public class QualificationDto implements Serializable {
 		/**
 		 * Degree year.
 		 *
-		 * @param degreeYear the degree year
+		 * @param degreeDate
+		 *            the degree year
 		 * @return the builder
 		 */
-		public Builder degreeYear(LocalDate degreeYear) {
-			this.degreeYear = degreeYear;
+		public Builder degreeDate(LocalDate degreeDate) {
+			this.degreeDate = degreeDate;
 			return this;
 		}
 
 		/**
 		 * Percentage.
 		 *
-		 * @param percentage the percentage
+		 * @param percentage
+		 *            the percentage
 		 * @return the builder
 		 */
-		public Builder percentage(Short percentage) {
+		public Builder percentage(Float percentage) {
 			this.percentage = percentage;
 			return this;
 		}
@@ -148,7 +126,7 @@ public class QualificationDto implements Serializable {
 			QualificationDto qualificationDto = new QualificationDto();
 			qualificationDto.degree = degree;
 			qualificationDto.institution = institution;
-			qualificationDto.degreeYear = degreeYear;
+			qualificationDto.degreeDate = degreeDate;
 			qualificationDto.percentage = percentage;
 			return qualificationDto;
 		}

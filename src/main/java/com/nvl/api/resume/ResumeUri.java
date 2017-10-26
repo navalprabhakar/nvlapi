@@ -7,10 +7,13 @@ package com.nvl.api.resume;
 /**
  * The Enum ResumeUri.
  */
-final class ResumeUri {
+public final class ResumeUri {
 
-	static final String CV = "/cv";
-	static final String OF = "/of";
+	public static final String CV = "/cv";
+	public static final String NVL = CV + "/nvl";
+	public static final String PRSN = CV + NVL + "/prsn";
+	public static final String PROF = CV + NVL + "/prof";
+	public static final String EDU = CV + NVL + PRSN + "/edu";
 
 	private ResumeUri() {
 	}
