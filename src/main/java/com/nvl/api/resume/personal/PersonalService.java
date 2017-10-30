@@ -18,7 +18,7 @@ import com.nvl.api.resume.personal.education.IEducationService;
 @Service
 public class PersonalService implements IPersonalService {
 
-	@Value("classpath:/static/json/resume/personal/candidate.json")
+	@Value("classpath:static/json/resume/personal/candidate.json")
 	protected Resource staticJsonCandidate;
 
 	@Autowired

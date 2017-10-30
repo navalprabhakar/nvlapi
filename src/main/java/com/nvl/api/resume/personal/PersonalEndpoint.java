@@ -26,7 +26,7 @@ public class PersonalEndpoint {
 	public CandidateDto of() {
 		return personalService.getCandidate();
 	}
-	
+
 	@GetMapping(path = ResumeUri.EDU)
 	public EducationDto education() {
 		return personalService.getEducation();

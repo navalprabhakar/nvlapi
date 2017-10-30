@@ -13,5 +13,6 @@ import com.nvl.api.resume.personal.education.EducationDto;
 public interface IPersonalService extends IReadOnlyDataService<CandidateDto> {
 
 	CandidateDto getCandidate();
+
 	EducationDto getEducation();
 }

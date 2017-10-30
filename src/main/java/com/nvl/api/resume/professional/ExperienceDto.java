@@ -43,8 +43,7 @@ public class ExperienceDto implements Serializable {
 		/**
 		 * Skills.
 		 *
-		 * @param skills
-		 *            the skills
+		 * @param skills the skills
 		 * @return the builder
 		 */
 		public Builder skills(List<SkillDto> skills) {
@@ -55,8 +54,7 @@ public class ExperienceDto implements Serializable {
 		/**
 		 * Summary.
 		 *
-		 * @param summary
-		 *            the summary
+		 * @param summary the summary
 		 * @return the builder
 		 */
 		public Builder summary(String summary) {

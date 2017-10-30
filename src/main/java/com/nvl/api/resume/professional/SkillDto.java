@@ -90,8 +90,7 @@ public class SkillDto implements Serializable {
 		/**
 		 * Code.
 		 *
-		 * @param code
-		 *            the code
+		 * @param code the code
 		 * @return the builder
 		 */
 		public Builder code(String code) {
@@ -102,8 +101,7 @@ public class SkillDto implements Serializable {
 		/**
 		 * Description.
 		 *
-		 * @param description
-		 *            the description
+		 * @param description the description
 		 * @return the builder
 		 */
 		public Builder description(String description) {
@@ -114,8 +112,7 @@ public class SkillDto implements Serializable {
 		/**
 		 * Level.
 		 *
-		 * @param aLevel
-		 *            the a level
+		 * @param aLevel the a level
 		 * @return the builder
 		 */
 		public Builder level(ExpertiseLevel level) {

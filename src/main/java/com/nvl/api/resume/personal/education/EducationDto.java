@@ -37,8 +37,7 @@ public class EducationDto implements Serializable {
 		/**
 		 * Qualifications.
 		 *
-		 * @param qualifications
-		 *            the qualifications
+		 * @param qualifications the qualifications
 		 * @return the builder
 		 */
 		public Builder qualifications(PriorityQueue<QualificationDto> qualifications) {

@@ -15,7 +15,7 @@ public class ResumeService implements IResumeService {
 	@Autowired
 	IPersonalService personalService;
 
-	@Value("classpath:/static/json/resume/resume.json")
+	@Value("classpath:static/json/resume/resume.json")
 	protected Resource staticJsonResume;
 
 	@Override

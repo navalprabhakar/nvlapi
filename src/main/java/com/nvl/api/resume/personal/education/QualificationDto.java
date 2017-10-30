@@ -72,8 +72,7 @@ public class QualificationDto implements Serializable {
 		/**
 		 * Degree.
 		 *
-		 * @param degree
-		 *            the degree
+		 * @param degree the degree
 		 * @return the builder
 		 */
 		public Builder degree(Degree degree) {
@@ -84,8 +83,7 @@ public class QualificationDto implements Serializable {
 		/**
 		 * Institution.
 		 *
-		 * @param institution
-		 *            the institution
+		 * @param institution the institution
 		 * @return the builder
 		 */
 		public Builder institution(String institution) {
@@ -96,8 +94,7 @@ public class QualificationDto implements Serializable {
 		/**
 		 * Degree year.
 		 *
-		 * @param degreeDate
-		 *            the degree year
+		 * @param degreeDate the degree year
 		 * @return the builder
 		 */
 		public Builder degreeDate(LocalDate degreeDate) {
@@ -108,8 +105,7 @@ public class QualificationDto implements Serializable {
 		/**
 		 * Percentage.
 		 *
-		 * @param percentage
-		 *            the percentage
+		 * @param percentage the percentage
 		 * @return the builder
 		 */
 		public Builder percentage(Float percentage) {

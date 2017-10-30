@@ -5,8 +5,6 @@
 package com.nvl.api.resume.personal.education;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,8 +13,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class EducationService implements IEducationService {
 
-	@Value("classpath:/static/json/resume/personal/education.json")
-	protected Resource staticJsonEducation;
+	/*
+	 * @Value("classpath:static/json/resume/personal/education.json") protected
+	 * Resource staticJsonEducation;
+	 */
 
 	/** The qualification service. */
 	@Autowired
@@ -24,9 +24,8 @@ public class EducationService implements IEducationService {
 
 	@Override
 	public EducationDto getEducation() {
-		EducationDto education = read(staticJsonEducation, EducationDto.class);		
+		EducationDto education = new EducationDto.Builder().build();
 		education.setQualifications(qualificationService.getQualifications());
-		
 		return education;
 	}
 

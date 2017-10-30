@@ -11,9 +11,9 @@ import org.springframework.web.servlet.DispatcherServlet;
 public class NvlapiApplication extends SpringBootServletInitializer {
 
 	@Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(NvlapiApplication.class);
-    }
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(NvlapiApplication.class);
+	}
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(NvlapiApplication.class, args);

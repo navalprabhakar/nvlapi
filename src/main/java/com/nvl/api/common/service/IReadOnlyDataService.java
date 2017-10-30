@@ -10,20 +10,20 @@ import org.springframework.core.io.Resource;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.nvl.api.common.ApiException;
 
 public interface IReadOnlyDataService<T> {
 
 	default T read(Resource resource, Class<T> dataClass) {
 		ObjectMapper mapper = new ObjectMapper();
 		T data;
+		String path = "";
 		try {
+			path = resource.getURI().getPath();
 			data = mapper.readValue(resource.getFile(), dataClass);
 		} catch (IOException e) {
-			try {
-				data = dataClass.newInstance();
-			} catch (InstantiationException | IllegalAccessException e1) {
-				data = null;
-			}
+			throw new ApiException("Resource not found", e).attribute("Type", dataClass.getName())
+					.attribute("Filename", path).attribute("Cause", e.getMessage());
 		}
 		return data;
 	}
@@ -44,7 +44,8 @@ public interface IReadOnlyDataService<T> {
 					data.add(datum);
 				}
 			}
-		} catch (IOException ex) {}
+		} catch (IOException ex) {
+		}
 		return data;
 	}
 }

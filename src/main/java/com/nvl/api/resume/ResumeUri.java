@@ -11,9 +11,9 @@ public final class ResumeUri {
 
 	public static final String CV = "/cv";
 	public static final String NVL = CV + "/nvl";
-	public static final String PRSN = CV + NVL + "/prsn";
-	public static final String PROF = CV + NVL + "/prof";
-	public static final String EDU = CV + NVL + PRSN + "/edu";
+	public static final String PRSN = NVL + "/prsn";
+	public static final String PROF = NVL + "/prof";
+	public static final String EDU = PRSN + "/edu";
 
 	private ResumeUri() {
 	}
