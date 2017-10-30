@@ -18,7 +18,8 @@ import com.nvl.api.resume.personal.education.IEducationService;
 @Service
 public class PersonalService implements IPersonalService {
 
-	@Value("classpath:static/json/resume/personal/candidate.json")
+	@Value("https://raw.githubusercontent.com/navalprabhakar/nvlapi"
+			+ "/master/src/main/resources/static/json/resume/personal/candidate.json")
 	protected Resource staticJsonCandidate;
 
 	@Autowired
@@ -26,7 +27,7 @@ public class PersonalService implements IPersonalService {
 
 	@Override
 	public CandidateDto getCandidate() {
-		return read(staticJsonCandidate, CandidateDto.class);
+		return read(CandidateDto.class, staticJsonCandidate);
 	}
 
 	@Override

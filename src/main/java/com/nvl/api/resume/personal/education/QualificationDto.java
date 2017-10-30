@@ -14,6 +14,8 @@ import com.nvl.api.common.converter.CustomLocalDateSerializer;
 
 /**
  * The Class QualificationDto.
+ * 
+ * GitHub Raw Path: https://raw.githubusercontent.com/navalprabhakar/nvlapi/master/src/main/resources/static/json/resume/personal/qualification/qualification1.json
  */
 public class QualificationDto implements Serializable {
 

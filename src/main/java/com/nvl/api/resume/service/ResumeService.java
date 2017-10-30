@@ -15,7 +15,8 @@ public class ResumeService implements IResumeService {
 	@Autowired
 	IPersonalService personalService;
 
-	@Value("classpath:static/json/resume/resume.json")
+	@Value("https://raw.githubusercontent.com/navalprabhakar/nvlapi"
+			+ "/master/src/main/resources/static/json/resume/resume.json")
 	protected Resource staticJsonResume;
 
 	@Override
@@ -23,7 +24,7 @@ public class ResumeService implements IResumeService {
 		CandidateDto candidate = personalService.getCandidate();
 		EducationDto education = personalService.getEducation();
 
-		ResumeDto resume = read(staticJsonResume, ResumeDto.class);
+		ResumeDto resume = read(ResumeDto.class, staticJsonResume);
 		resume.setCandidate(candidate);
 		resume.setEducation(education);
 		return resume;
