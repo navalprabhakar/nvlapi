@@ -20,7 +20,7 @@ public interface IReadOnlyDataService<T> {
 		String path = "";
 		try {
 			path = resource.getURI().getPath();
-			data = mapper.readValue(resource.getFile(), dataClass);
+			data = mapper.readValue(resource.getInputStream(), dataClass);
 		} catch (IOException e) {
 			throw new ApiException("Resource not found", e).attribute("Type", dataClass.getName())
 					.attribute("Filename", path).attribute("Cause", e.getMessage());

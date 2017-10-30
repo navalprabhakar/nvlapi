@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class QualificationService implements IQualificationService {
 
-	@Value("classpath:static/json/resume/personal/qualification")
+	@Value("classpath:static/json/resume/personal/qualification/")
 	protected Resource staticJsonQualifications;
 
 	@Override
