@@ -11,8 +11,8 @@ import com.nvl.api.common.service.IReadOnlyDataService;
 /**
  * The Interface IQualificationService.
  */
-public interface IQualificationService extends IReadOnlyDataService<QualificationDto> {
+public interface IQualificationService extends IReadOnlyDataService<Qualification> {
 
-	List<QualificationDto> getQualifications();
+	List<Qualification> getQualifications();
 
 }

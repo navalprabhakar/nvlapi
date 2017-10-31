@@ -4,25 +4,26 @@
  */
 package com.nvl.api.resume.personal.education;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.PriorityQueue;
 
+import com.nvl.api.common.Payload;
+
 /**
- * The Class EducationDto.
+ * The Class Education.
  */
-public class EducationDto implements Serializable {
+public class Education implements Payload {
 
 	private static final long serialVersionUID = 616589648248507644L;
 
-	private PriorityQueue<QualificationDto> qualifications;
+	private PriorityQueue<Qualification> qualifications;
 
-	public PriorityQueue<QualificationDto> getQualifications() {
+	public PriorityQueue<Qualification> getQualifications() {
 		return qualifications;
 	}
 
-	public void setQualifications(List<QualificationDto> listQualifications) {
-		qualifications = new PriorityQueue<QualificationDto>((QualificationDto q1, QualificationDto q2) -> {
+	public void setQualifications(List<Qualification> listQualifications) {
+		qualifications = new PriorityQueue<Qualification>((Qualification q1, Qualification q2) -> {
 			return q2.getDegreeDate().compareTo(q1.getDegreeDate());
 		});
 		listQualifications.forEach(qualifications::add);
@@ -32,7 +33,7 @@ public class EducationDto implements Serializable {
 	 * The Class Builder.
 	 */
 	public static class Builder {
-		private PriorityQueue<QualificationDto> qualifications;
+		private PriorityQueue<Qualification> qualifications;
 
 		/**
 		 * Qualifications.
@@ -40,7 +41,7 @@ public class EducationDto implements Serializable {
 		 * @param qualifications the qualifications
 		 * @return the builder
 		 */
-		public Builder qualifications(PriorityQueue<QualificationDto> qualifications) {
+		public Builder qualifications(PriorityQueue<Qualification> qualifications) {
 			this.qualifications = qualifications;
 			return this;
 		}
@@ -48,10 +49,10 @@ public class EducationDto implements Serializable {
 		/**
 		 * Builds the.
 		 *
-		 * @return the education dto
+		 * @return the education
 		 */
-		public EducationDto build() {
-			EducationDto educationDto = new EducationDto();
+		public Education build() {
+			Education educationDto = new Education();
 			educationDto.qualifications = qualifications;
 			return educationDto;
 		}

@@ -4,39 +4,39 @@
  */
 package com.nvl.api.resume.service;
 
-import java.io.Serializable;
 import java.util.List;
 
-import com.nvl.api.resume.personal.CandidateDto;
-import com.nvl.api.resume.personal.education.EducationDto;
+import com.nvl.api.common.Payload;
+import com.nvl.api.resume.personal.Candidate;
+import com.nvl.api.resume.personal.education.Education;
 
 /**
- * The Class ResumeDto.
+ * The Class Resume.
  */
-public class ResumeDto implements Serializable {
+public class Resume implements Payload {
 
 	private static final long serialVersionUID = -7429099854863254655L;
 
-	private CandidateDto candidate;
+	private Candidate candidate;
 	private String highlights;
 	private String mission;
 	private List<String> milestonesToGo;
 	private List<String> milestonesSeen;
-	private EducationDto education;
+	private Education education;
 
-	public CandidateDto getCandidate() {
+	public Candidate getCandidate() {
 		return candidate;
 	}
 
-	public void setCandidate(CandidateDto aCandidate) {
+	public void setCandidate(Candidate aCandidate) {
 		candidate = aCandidate;
 	}
 
-	public EducationDto getEducation() {
+	public Education getEducation() {
 		return education;
 	}
 
-	public void setEducation(EducationDto aEducation) {
+	public void setEducation(Education aEducation) {
 		education = aEducation;
 	}
 
@@ -77,12 +77,12 @@ public class ResumeDto implements Serializable {
 	 */
 	public static class Builder {
 
-		private CandidateDto candidate;
+		private Candidate candidate;
 		private String highlights;
 		private String mission;
 		private List<String> milestonesToGo;
 		private List<String> milestonesSeen;
-		private EducationDto education;
+		private Education education;
 
 		/**
 		 * Candidate.
@@ -90,7 +90,7 @@ public class ResumeDto implements Serializable {
 		 * @param candidate the candidate
 		 * @return the builder
 		 */
-		public Builder candidate(CandidateDto candidate) {
+		public Builder candidate(Candidate candidate) {
 			this.candidate = candidate;
 			return this;
 		}
@@ -145,7 +145,7 @@ public class ResumeDto implements Serializable {
 		 * @param education the education
 		 * @return the builder
 		 */
-		public Builder education(EducationDto education) {
+		public Builder education(Education education) {
 			this.education = education;
 			return this;
 		}
@@ -153,10 +153,10 @@ public class ResumeDto implements Serializable {
 		/**
 		 * Builds the.
 		 *
-		 * @return the resume dto
+		 * @return the resume
 		 */
-		public ResumeDto build() {
-			ResumeDto resumeDto = new ResumeDto();
+		public Resume build() {
+			Resume resumeDto = new Resume();
 			resumeDto.candidate = candidate;
 			resumeDto.highlights = highlights;
 			resumeDto.mission = mission;

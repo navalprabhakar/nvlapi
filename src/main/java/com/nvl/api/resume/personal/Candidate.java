@@ -4,12 +4,12 @@
  */
 package com.nvl.api.resume.personal;
 
-import java.io.Serializable;
+import com.nvl.api.common.Payload;
 
 /**
- * The Class CandidateDto.
+ * The Class Candidate.
  */
-public class CandidateDto implements Serializable {
+public class Candidate implements Payload {
 
 	private static final long serialVersionUID = 7351957835996499134L;
 
@@ -190,10 +190,10 @@ public class CandidateDto implements Serializable {
 		/**
 		 * Builds the.
 		 *
-		 * @return the candidate dto
+		 * @return the candidate
 		 */
-		public CandidateDto build() {
-			CandidateDto candidateDto = new CandidateDto();
+		public Candidate build() {
+			Candidate candidateDto = new Candidate();
 			candidateDto.name = name;
 			candidateDto.city = city;
 			candidateDto.country = country;

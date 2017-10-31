@@ -1,5 +1,12 @@
+/**
+ * @project NVL.API
+ * @author navalprabhakar
+ */
 package com.nvl.api.common;
 
+/**
+ * The Class ApiError.
+ */
 public class ApiError implements IError {
 
 	String errorCode;
@@ -33,26 +40,52 @@ public class ApiError implements IError {
 		errorReason = aErrorReason;
 	}
 
+	/**
+	 * The Class Builder.
+	 */
 	public static class Builder {
 		private String errorCode;
 		private String errorMessage;
 		private Throwable errorReason;
 
+		/**
+		 * Error code.
+		 *
+		 * @param errorCode the error code
+		 * @return the builder
+		 */
 		public Builder errorCode(String errorCode) {
 			this.errorCode = errorCode;
 			return this;
 		}
 
+		/**
+		 * Error message.
+		 *
+		 * @param errorMessage the error message
+		 * @return the builder
+		 */
 		public Builder errorMessage(String errorMessage) {
 			this.errorMessage = errorMessage;
 			return this;
 		}
 
+		/**
+		 * Error reason.
+		 *
+		 * @param errorReason the error reason
+		 * @return the builder
+		 */
 		public Builder errorReason(Throwable errorReason) {
 			this.errorReason = errorReason;
 			return this;
 		}
 
+		/**
+		 * Builds the.
+		 *
+		 * @return the api error
+		 */
 		public ApiError build() {
 			ApiError apiError = new ApiError();
 			apiError.errorCode = errorCode;

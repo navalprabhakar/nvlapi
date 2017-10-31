@@ -4,13 +4,14 @@
  */
 package com.nvl.api.resume.professional;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 
+import com.nvl.api.common.Payload;
+
 /**
- * The Class CompanyDto.
+ * The Class CompanyWorked.
  */
-public class CompanyWorkedDto implements Serializable {
+public class CompanyWorked implements Payload {
 
 	private static final long serialVersionUID = 5116273208602013781L;
 
@@ -86,10 +87,10 @@ public class CompanyWorkedDto implements Serializable {
 		/**
 		 * Builds the.
 		 *
-		 * @return the company dto
+		 * @return the company worked
 		 */
-		public CompanyWorkedDto build() {
-			CompanyWorkedDto companyDto = new CompanyWorkedDto();
+		public CompanyWorked build() {
+			CompanyWorked companyDto = new CompanyWorked();
 			companyDto.name = name;
 			companyDto.startDate = startDate;
 			companyDto.endDate = endDate;

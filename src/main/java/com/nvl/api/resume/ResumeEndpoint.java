@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.nvl.api.common.ApiResponse;
 import com.nvl.api.resume.service.IResumeService;
-import com.nvl.api.resume.service.ResumeDto;
+import com.nvl.api.resume.service.Resume;
 
 /**
  * The Class ResumeEndpoint.
@@ -24,9 +24,9 @@ public class ResumeEndpoint {
 	@Autowired
 	IResumeService resumeService;
 
-	@GetMapping("")
-	public ApiResponse<ResumeDto> getResume() {
-		return new ApiResponse.Builder<ResumeDto>().data(resumeService.getResume())
+	@GetMapping()
+	public ApiResponse<Resume> getResume() {
+		return new ApiResponse.Builder<Resume>().data(resumeService.getResume())
 				.status(HttpStatus.FOUND.getReasonPhrase()).statusCode(HttpStatus.FOUND.value()).build();
 	}
 }

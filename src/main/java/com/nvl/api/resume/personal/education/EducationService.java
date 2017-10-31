@@ -23,8 +23,8 @@ public class EducationService implements IEducationService {
 	IQualificationService qualificationService;
 
 	@Override
-	public EducationDto getEducation() {
-		EducationDto education = new EducationDto.Builder().build();
+	public Education getEducation() {
+		Education education = new Education.Builder().build();
 		education.setQualifications(qualificationService.getQualifications());
 		return education;
 	}

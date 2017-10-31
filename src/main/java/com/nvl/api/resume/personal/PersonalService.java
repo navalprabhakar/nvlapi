@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
-import com.nvl.api.resume.personal.education.EducationDto;
+import com.nvl.api.resume.personal.education.Education;
 import com.nvl.api.resume.personal.education.IEducationService;
 
 /**
@@ -26,12 +26,12 @@ public class PersonalService implements IPersonalService {
 	private IEducationService educationService;
 
 	@Override
-	public CandidateDto getCandidate() {
-		return read(CandidateDto.class, staticJsonCandidate);
+	public Candidate getCandidate() {
+		return read(Candidate.class, staticJsonCandidate);
 	}
 
 	@Override
-	public EducationDto getEducation() {
+	public Education getEducation() {
 		return educationService.getEducation();
 	}
 

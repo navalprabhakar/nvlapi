@@ -5,14 +5,14 @@
 package com.nvl.api.resume.personal;
 
 import com.nvl.api.common.service.IReadOnlyDataService;
-import com.nvl.api.resume.personal.education.EducationDto;
+import com.nvl.api.resume.personal.education.Education;
 
 /**
  * The Interface IPersonalService.
  */
-public interface IPersonalService extends IReadOnlyDataService<CandidateDto> {
+public interface IPersonalService extends IReadOnlyDataService<Candidate> {
 
-	CandidateDto getCandidate();
+	Candidate getCandidate();
 
-	EducationDto getEducation();
+	Education getEducation();
 }

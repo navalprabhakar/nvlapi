@@ -1,3 +1,7 @@
+/**
+ * @project NVL.API
+ * @author navalprabhakar
+ */
 package com.nvl.api;
 
 import java.util.HashMap;
@@ -20,6 +24,9 @@ import com.nvl.api.common.ApiError;
 import com.nvl.api.common.ApiException;
 import com.nvl.api.common.ApiResponse;
 
+/**
+ * The Class ApplicationExceptionHandler.
+ */
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @EnableWebMvc
 @ControllerAdvice
@@ -34,6 +41,12 @@ public class ApplicationExceptionHandler extends ResponseEntityExceptionHandler 
 		return new ResponseEntity<Object>(responseBody, HttpStatus.NOT_FOUND);
 	}
 
+	/**
+	 * Api error.
+	 *
+	 * @param ex the ex
+	 * @return the api response
+	 */
 	@ExceptionHandler(ApiException.class)
 	@ResponseBody
 	public ApiResponse<ApiError> apiError(ApiException ex) {

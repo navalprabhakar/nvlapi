@@ -4,20 +4,18 @@
  */
 package com.nvl.api.resume.personal.education;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.nvl.api.common.Payload;
 import com.nvl.api.common.converter.CustomLocalDateDeserializer;
 import com.nvl.api.common.converter.CustomLocalDateSerializer;
 
 /**
- * The Class QualificationDto.
- * 
- * GitHub Raw Path: https://raw.githubusercontent.com/navalprabhakar/nvlapi/master/src/main/resources/static/json/resume/personal/qualification/qualification1.json
+ * The Class Qualification.
  */
-public class QualificationDto implements Serializable {
+public class Qualification implements Payload {
 
 	private static final long serialVersionUID = -6188811588363031986L;
 
@@ -94,9 +92,9 @@ public class QualificationDto implements Serializable {
 		}
 
 		/**
-		 * Degree year.
+		 * Degree date.
 		 *
-		 * @param degreeDate the degree year
+		 * @param degreeDate the degree date
 		 * @return the builder
 		 */
 		public Builder degreeDate(LocalDate degreeDate) {
@@ -118,10 +116,10 @@ public class QualificationDto implements Serializable {
 		/**
 		 * Builds the.
 		 *
-		 * @return the qualification dto
+		 * @return the qualification
 		 */
-		public QualificationDto build() {
-			QualificationDto qualificationDto = new QualificationDto();
+		public Qualification build() {
+			Qualification qualificationDto = new Qualification();
 			qualificationDto.degree = degree;
 			qualificationDto.institution = institution;
 			qualificationDto.degreeDate = degreeDate;

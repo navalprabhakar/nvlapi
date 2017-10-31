@@ -4,12 +4,12 @@
  */
 package com.nvl.api.resume.professional;
 
-import java.io.Serializable;
+import com.nvl.api.common.Payload;
 
 /**
- * The Class SkillDto.
+ * The Class Skill.
  */
-public class SkillDto implements Serializable {
+public class Skill implements Payload {
 
 	private static final long serialVersionUID = -4657411069876472590L;
 
@@ -112,7 +112,7 @@ public class SkillDto implements Serializable {
 		/**
 		 * Level.
 		 *
-		 * @param aLevel the a level
+		 * @param level the level
 		 * @return the builder
 		 */
 		public Builder level(ExpertiseLevel level) {
@@ -123,10 +123,10 @@ public class SkillDto implements Serializable {
 		/**
 		 * Builds the.
 		 *
-		 * @return the skill dto
+		 * @return the skill
 		 */
-		public SkillDto build() {
-			SkillDto skillDto = new SkillDto();
+		public Skill build() {
+			Skill skillDto = new Skill();
 			skillDto.code = code;
 			skillDto.description = description;
 			skillDto.level = level;

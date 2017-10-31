@@ -1,3 +1,7 @@
+/**
+ * @project NVL.API
+ * @author navalprabhakar
+ */
 package com.nvl.api.common.service;
 
 import java.io.IOException;
@@ -9,6 +13,11 @@ import org.springframework.core.io.Resource;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nvl.api.common.ApiException;
 
+/**
+ * The Interface IReadOnlyDataService.
+ *
+ * @param <T> the generic type
+ */
 public interface IReadOnlyDataService<T> {
 
 	default T read(Class<T> dataClass, Resource resource) {

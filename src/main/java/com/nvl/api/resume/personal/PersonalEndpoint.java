@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nvl.api.resume.ResumeUri;
-import com.nvl.api.resume.personal.education.EducationDto;
+import com.nvl.api.resume.personal.education.Education;
 
 /**
  * The Class ResumeEndpoint.
@@ -23,12 +23,12 @@ public class PersonalEndpoint {
 	private IPersonalService personalService;
 
 	@GetMapping()
-	public CandidateDto of() {
+	public Candidate of() {
 		return personalService.getCandidate();
 	}
 
 	@GetMapping(path = ResumeUri.EDU)
-	public EducationDto education() {
+	public Education education() {
 		return personalService.getEducation();
 	}
 }

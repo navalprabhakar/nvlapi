@@ -4,24 +4,25 @@
  */
 package com.nvl.api.resume.professional;
 
-import java.io.Serializable;
 import java.util.List;
 
+import com.nvl.api.common.Payload;
+
 /**
- * The Class ExperienceDto.
+ * The Class Experience.
  */
-public class ExperienceDto implements Serializable {
+public class Experience implements Payload {
 
 	private static final long serialVersionUID = -4512614827273210245L;
 
-	private List<SkillDto> skills;
+	private List<Skill> skills;
 	private String summary;
 
-	public List<SkillDto> getSkills() {
+	public List<Skill> getSkills() {
 		return skills;
 	}
 
-	public void setSkills(List<SkillDto> aSkills) {
+	public void setSkills(List<Skill> aSkills) {
 		skills = aSkills;
 	}
 
@@ -37,7 +38,7 @@ public class ExperienceDto implements Serializable {
 	 * The Class Builder.
 	 */
 	public static class Builder {
-		private List<SkillDto> skills;
+		private List<Skill> skills;
 		private String summary;
 
 		/**
@@ -46,7 +47,7 @@ public class ExperienceDto implements Serializable {
 		 * @param skills the skills
 		 * @return the builder
 		 */
-		public Builder skills(List<SkillDto> skills) {
+		public Builder skills(List<Skill> skills) {
 			this.skills = skills;
 			return this;
 		}
@@ -65,10 +66,10 @@ public class ExperienceDto implements Serializable {
 		/**
 		 * Builds the.
 		 *
-		 * @return the experience dto
+		 * @return the experience
 		 */
-		public ExperienceDto build() {
-			ExperienceDto experienceDto = new ExperienceDto();
+		public Experience build() {
+			Experience experienceDto = new Experience();
 			experienceDto.skills = skills;
 			experienceDto.summary = summary;
 			return experienceDto;

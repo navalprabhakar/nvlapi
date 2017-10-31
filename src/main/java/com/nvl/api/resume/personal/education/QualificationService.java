@@ -33,8 +33,8 @@ public class QualificationService implements IQualificationService {
 	protected Resource staticJsonQualification4;
 
 	@Override
-	public List<QualificationDto> getQualifications() {
-		return readAll(QualificationDto.class, staticJsonQualification1, staticJsonQualification2,
+	public List<Qualification> getQualifications() {
+		return readAll(Qualification.class, staticJsonQualification1, staticJsonQualification2,
 				staticJsonQualification3, staticJsonQualification4);
 	}
 

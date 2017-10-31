@@ -9,8 +9,8 @@ import com.nvl.api.common.service.IReadOnlyDataService;
 /**
  * The Interface IResumeService.
  */
-public interface IResumeService extends IReadOnlyDataService<ResumeDto> {
+public interface IResumeService extends IReadOnlyDataService<Resume> {
 
-	ResumeDto getResume();
+	Resume getResume();
 
 }
