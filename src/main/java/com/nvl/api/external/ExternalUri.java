@@ -10,7 +10,7 @@ package com.nvl.api.external;
 public final class ExternalUri {
 
 	static final String EXTERNAL = "/external";
-	static final String THISDAY_DAY_MONTH = "/{day}/{month}";
+	static final String THISDAY_DAY_MONTH = "/trivia/{day}/{month}";
 
 	private ExternalUri() {
 	}

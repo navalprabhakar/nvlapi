@@ -15,9 +15,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.NoHandlerFoundException;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import com.nvl.api.common.ApiError;
@@ -28,7 +28,7 @@ import com.nvl.api.common.ApiResponse;
  * The Class ApplicationExceptionHandler.
  */
 @Order(Ordered.HIGHEST_PRECEDENCE)
-@EnableWebMvc
+//Never use '@' EnableWebMvc, it disables spring boot auto configuration
 @ControllerAdvice
 public class ApplicationExceptionHandler extends ResponseEntityExceptionHandler {
 
@@ -48,6 +48,7 @@ public class ApplicationExceptionHandler extends ResponseEntityExceptionHandler 
 	 * @return the api response
 	 */
 	@ExceptionHandler(ApiException.class)
+	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	@ResponseBody
 	public ApiResponse<ApiError> apiError(ApiException ex) {
 		ApiError error = new ApiError.Builder().errorCode("E001")
