@@ -39,8 +39,8 @@ public class SwaggerConfigurer extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry aRegistry) {
-		aRegistry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources");
-		aRegistry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+		aRegistry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/resources");
+		aRegistry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/resources/webjars/");
 	}
 
 	private ApiInfo metaData() {
