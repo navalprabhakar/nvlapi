@@ -11,6 +11,11 @@ import com.nvl.api.common.service.IReadOnlyDataService;
  */
 public interface IResumeService extends IReadOnlyDataService<Resume> {
 
+	/**
+	 * Gets the resume.
+	 *
+	 * @return the resume
+	 */
 	Resume getResume();
 
 }

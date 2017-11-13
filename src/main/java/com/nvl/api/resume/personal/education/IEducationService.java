@@ -11,6 +11,11 @@ import com.nvl.api.common.service.IReadOnlyDataService;
  */
 public interface IEducationService extends IReadOnlyDataService<Education> {
 
+	/**
+	 * Gets the education.
+	 *
+	 * @return the education
+	 */
 	Education getEducation();
 
 }

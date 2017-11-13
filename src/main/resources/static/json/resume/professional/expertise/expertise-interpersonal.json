@@ -1,0 +1,29 @@
+{
+	"expertiseType": {
+		"type": "IPER",
+		"description": "interpersonal"
+	},
+	"competencies": [
+		{
+			"skill": {
+				"code": "IP_AGILE",
+				"description": "Agile/scrum team working"
+			},
+			"level": "high"
+		},
+		{
+			"skill": {
+				"code": "IP_COMM",
+				"description": "Written and oral communication"
+			},
+			"level": "high"
+		},
+		{
+			"skill": {
+				"code": "IP_LEAD",
+				"description": "Technical leadership and guidance"
+			},
+			"level": "good"
+		}
+	]
+}

@@ -9,6 +9,7 @@ import java.util.List;
 import com.nvl.api.common.Payload;
 import com.nvl.api.resume.personal.Candidate;
 import com.nvl.api.resume.personal.education.Education;
+import com.nvl.api.resume.professional.Experience;
 
 /**
  * The Class Resume.
@@ -23,6 +24,7 @@ public class Resume implements Payload {
 	private List<String> milestonesToGo;
 	private List<String> milestonesSeen;
 	private Education education;
+	private Experience experience;
 
 	public Candidate getCandidate() {
 		return candidate;
@@ -72,6 +74,14 @@ public class Resume implements Payload {
 		milestonesSeen = aMilestonesSeen;
 	}
 
+	public Experience getExperience() {
+		return experience;
+	}
+
+	public void setExperience(Experience aExperience) {
+		experience = aExperience;
+	}
+
 	/**
 	 * The Class Builder.
 	 */
@@ -83,6 +93,7 @@ public class Resume implements Payload {
 		private List<String> milestonesToGo;
 		private List<String> milestonesSeen;
 		private Education education;
+		private Experience experience;
 
 		/**
 		 * Candidate.
@@ -151,6 +162,17 @@ public class Resume implements Payload {
 		}
 
 		/**
+		 * Experience.
+		 *
+		 * @param experience the experience
+		 * @return the builder
+		 */
+		public Builder experience(Experience experience) {
+			this.experience = experience;
+			return this;
+		}
+
+		/**
 		 * Builds the.
 		 *
 		 * @return the resume
@@ -163,6 +185,7 @@ public class Resume implements Payload {
 			resumeDto.milestonesToGo = milestonesToGo;
 			resumeDto.milestonesSeen = milestonesSeen;
 			resumeDto.education = education;
+			resumeDto.experience = experience;
 			return resumeDto;
 		}
 	}

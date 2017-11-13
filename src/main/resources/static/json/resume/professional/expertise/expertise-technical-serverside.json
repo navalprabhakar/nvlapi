@@ -1,0 +1,22 @@
+{
+	"expertiseType": {
+		"type": "TSER",
+		"description": "technical server side"
+	},
+	"competencies": [
+		{
+			"skill": {
+				"code": "JV_CORE_FNDM",
+				"description": "Java core fundamentals"
+			},
+			"level": "expert"
+		},
+		{
+			"skill": {
+				"code": "JV_EE_SRV_JSP",
+				"description": "Java enterprise servlet/jsp"
+			},
+			"level": "expert"
+		}
+	]
+}

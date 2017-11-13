@@ -1,0 +1,36 @@
+{
+	"expertiseType": {
+		"type": "TCLI",
+		"description": "technical client side"
+	},
+	"competencies": [
+		{
+			"skill": {
+				"code": "FR_JAVASCRIPT",
+				"description": "Javascript"
+			},
+			"level": "high"
+		},
+		{
+			"skill": {
+				"code": "FR_ANG_TYPESCRIPT",
+				"description": "Angular Typescript"
+			},
+			"level": "good"
+		},
+		{
+			"skill": {
+				"code": "FR_HTML5",
+				"description": "Html 5"
+			},
+			"level": "good"
+		},
+		{
+			"skill": {
+				"code": "FR_CSS_SASS",
+				"description": "Cascading style sheets and Sass"
+			},
+			"level": "good"
+		}
+	]
+}

@@ -65,14 +65,13 @@ public enum Degree {
 				throws IOException, JsonProcessingException {
 			final JsonNode jsonNode = jp.readValueAsTree();
 			String code = jsonNode.get("code").asText();
-			String name = jsonNode.get("name").asText();
 
 			for (Degree me : Degree.values()) {
-				if (me.getCode().equals(code) && me.getName().equals(name)) {
+				if (me.getCode().equals(code)) {
 					return me;
 				}
 			}
-			throw dc.mappingException("Cannot deserialize Degree from code " + code + " and name " + name);
+			throw dc.mappingException("Cannot deserialize Degree from code " + code);
 		}
 	}
 }

@@ -12,7 +12,17 @@ import com.nvl.api.resume.personal.education.Education;
  */
 public interface IPersonalService extends IReadOnlyDataService<Candidate> {
 
+	/**
+	 * Gets the candidate.
+	 *
+	 * @return the candidate
+	 */
 	Candidate getCandidate();
 
+	/**
+	 * Gets the education.
+	 *
+	 * @return the education
+	 */
 	Education getEducation();
 }

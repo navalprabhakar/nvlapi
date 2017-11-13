@@ -1,0 +1,36 @@
+{
+	"expertiseType": {
+		"type": "TINF",
+		"description": "technical infrastructure"
+	},
+	"competencies": [
+		{
+			"skill": {
+				"code": "IN_GIT",
+				"description": "Git version control system"
+			},
+			"level": "high"
+		},
+		{
+			"skill": {
+				"code": "IN_MVN",
+				"description": "Maven build system"
+			},
+			"level": "high"
+		},
+		{
+			"skill": {
+				"code": "IN_NODE",
+				"description": "Nodejs node package manager"
+			},
+			"level": "moderate"
+		},
+		{
+			"skill": {
+				"code": "IN_WEBPACK",
+				"description": "Webpack build management"
+			},
+			"level": "moderate"
+		}
+	]
+}

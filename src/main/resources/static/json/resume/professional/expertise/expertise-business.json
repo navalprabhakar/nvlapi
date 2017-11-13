@@ -1,0 +1,29 @@
+{
+	"expertiseType": {
+		"type": "BUSI",
+		"description": "business"
+	},
+	"competencies": [
+		{
+			"skill": {
+				"code": "BS_FINANCE_INS",
+				"description": "Finance/insurance"
+			},
+			"level": "high"
+		},
+		{
+			"skill": {
+				"code": "BS_TELECOM",
+				"description": "Telecommunications"
+			},
+			"level": "good"
+		},
+		{
+			"skill": {
+				"code": "BS_AUTOMATION",
+				"description": "Automation Management"
+			},
+			"level": "good"
+		}
+	]
+}

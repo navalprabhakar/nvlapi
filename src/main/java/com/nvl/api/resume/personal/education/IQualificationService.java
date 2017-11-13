@@ -13,6 +13,11 @@ import com.nvl.api.common.service.IReadOnlyDataService;
  */
 public interface IQualificationService extends IReadOnlyDataService<Qualification> {
 
+	/**
+	 * Gets the qualifications.
+	 *
+	 * @return the qualifications
+	 */
 	List<Qualification> getQualifications();
 
 }
