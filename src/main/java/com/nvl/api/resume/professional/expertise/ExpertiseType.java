@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 @JsonDeserialize(using = ExpertiseType.ExpertiseTypeDeserializer.class)
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum ExpertiseType {
-	TSER("TSER", "technical server side"), TCLI("TCLT", "technical client side"), TINF("TINF",
+	TSER("TSER", "technical server side"), TCLI("TCLI", "technical client side"), TINF("TINF",
 			"technical infrastructure"), BUSI("BUSI", "business"), IPER("IPER", "interpersonal");
 
 	private String type;
