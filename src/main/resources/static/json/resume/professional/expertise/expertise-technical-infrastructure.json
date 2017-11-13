@@ -28,7 +28,7 @@
 				"description": "Nodejs node package manager"
 			},
 			"level": {
-				"description": "moderate"
+				"description": "working"
 			}
 		},
 		{
@@ -37,7 +37,7 @@
 				"description": "Webpack build management"
 			},
 			"level": {
-				"description": "moderate"
+				"description": "working"
 			}
 		}
 	]
