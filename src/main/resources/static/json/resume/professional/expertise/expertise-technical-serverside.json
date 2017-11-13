@@ -9,14 +9,18 @@
 				"code": "JV_CORE_FNDM",
 				"description": "Java core fundamentals"
 			},
-			"level": "expert"
+			"level": {
+				"description": "expert"
+			}
 		},
 		{
 			"skill": {
 				"code": "JV_EE_SRV_JSP",
 				"description": "Java enterprise servlet/jsp"
 			},
-			"level": "expert"
+			"level": {
+				"description": "expert"
+			}
 		}
 	]
 }

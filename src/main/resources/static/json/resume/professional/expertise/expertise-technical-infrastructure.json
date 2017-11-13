@@ -9,28 +9,36 @@
 				"code": "IN_GIT",
 				"description": "Git version control system"
 			},
-			"level": "high"
+			"level": {
+				"description": "high"
+			}
 		},
 		{
 			"skill": {
 				"code": "IN_MVN",
 				"description": "Maven build system"
 			},
-			"level": "high"
+			"level": {
+				"description": "high"
+			}
 		},
 		{
 			"skill": {
 				"code": "IN_NODE",
 				"description": "Nodejs node package manager"
 			},
-			"level": "moderate"
+			"level": {
+				"description": "moderate"
+			}
 		},
 		{
 			"skill": {
 				"code": "IN_WEBPACK",
 				"description": "Webpack build management"
 			},
-			"level": "moderate"
+			"level": {
+				"description": "moderate"
+			}
 		}
 	]
 }

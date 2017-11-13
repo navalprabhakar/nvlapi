@@ -20,14 +20,12 @@ public class Skill {
 		return description;
 	}
 
-	/**
-	 * Instantiates a new skill.
-	 *
-	 * @param code the code
-	 * @param description the description
-	 */
-	public Skill(String code, String description) {
-		this.code = code;
-		this.description = description;
+	public void setCode(String aCode) {
+		code = aCode;
 	}
+
+	public void setDescription(String aDescription) {
+		description = aDescription;
+	}
+
 }

@@ -9,21 +9,27 @@
 				"code": "IP_AGILE",
 				"description": "Agile/scrum team working"
 			},
-			"level": "high"
+			"level": {
+				"description": "high"
+			}
 		},
 		{
 			"skill": {
 				"code": "IP_COMM",
 				"description": "Written and oral communication"
 			},
-			"level": "high"
+			"level": {
+				"description": "high"
+			}
 		},
 		{
 			"skill": {
 				"code": "IP_LEAD",
 				"description": "Technical leadership and guidance"
 			},
-			"level": "good"
+			"level": {
+				"description": "good"
+			}
 		}
 	]
 }

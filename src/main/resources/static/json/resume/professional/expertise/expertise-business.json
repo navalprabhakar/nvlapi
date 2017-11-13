@@ -9,21 +9,27 @@
 				"code": "BS_FINANCE_INS",
 				"description": "Finance/insurance"
 			},
-			"level": "high"
+			"level": {
+				"description": "high"
+			}
 		},
 		{
 			"skill": {
 				"code": "BS_TELECOM",
 				"description": "Telecommunications"
 			},
-			"level": "good"
+			"level": {
+				"description": "good"
+			}
 		},
 		{
 			"skill": {
 				"code": "BS_AUTOMATION",
 				"description": "Automation Management"
 			},
-			"level": "good"
+			"level": {
+				"description": "high"
+			}
 		}
 	]
 }
