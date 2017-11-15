@@ -16,15 +16,15 @@ public class Experience implements Payload {
 
 	private static final long serialVersionUID = -4512614827273210245L;
 
-	private List<Expertise> skills;
+	private List<Expertise> expertises;
 	private String summary;
 
-	public List<Expertise> getSkills() {
-		return skills;
+	public List<Expertise> getExpertises() {
+		return expertises;
 	}
 
-	public void setSkills(List<Expertise> aSkills) {
-		skills = aSkills;
+	public void setExpertises(List<Expertise> aExpertises) {
+		expertises = aExpertises;
 	}
 
 	public String getSummary() {
@@ -39,17 +39,17 @@ public class Experience implements Payload {
 	 * The Class Builder.
 	 */
 	public static class Builder {
-		private List<Expertise> skills;
+		private List<Expertise> expertises;
 		private String summary;
 
 		/**
 		 * Skills.
 		 *
-		 * @param skills the skills
+		 * @param aExpertises the expertises
 		 * @return the builder
 		 */
-		public Builder skills(List<Expertise> skills) {
-			this.skills = skills;
+		public Builder expertises(List<Expertise> aExpertises) {
+			this.expertises = aExpertises;
 			return this;
 		}
 
@@ -71,7 +71,7 @@ public class Experience implements Payload {
 		 */
 		public Experience build() {
 			Experience experienceDto = new Experience();
-			experienceDto.skills = skills;
+			experienceDto.expertises = expertises;
 			experienceDto.summary = summary;
 			return experienceDto;
 		}

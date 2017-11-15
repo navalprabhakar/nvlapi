@@ -7,7 +7,7 @@ package com.nvl.api.resume.professional.expertise;
 /**
  * The Class Competency.
  */
-public class Competency {
+public class Competency implements Comparable<Competency> {
 	private Skill skill;
 	private Level level;
 
@@ -67,5 +67,10 @@ public class Competency {
 			competency.level = level;
 			return competency;
 		}
+	}
+
+	@Override
+	public int compareTo(Competency other) {
+		return Integer.valueOf(other.level.ordinal()).compareTo(Integer.valueOf(this.level.ordinal()));
 	}
 }

@@ -7,6 +7,7 @@ package com.nvl.api.resume.professional.expertise;
 import java.io.IOException;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
@@ -26,6 +27,11 @@ public enum Level {
 
 	public String getDescription() {
 		return description;
+	}
+
+	@JsonProperty("numberOfStars")
+	public Integer getLevelStars() {
+		return this.ordinal() + 1;
 	}
 
 	private Level(String aDescription) {

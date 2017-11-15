@@ -5,7 +5,7 @@
 package com.nvl.api.resume.professional.expertise;
 
 import java.util.List;
-import java.util.PriorityQueue;
+import java.util.stream.Collectors;
 
 import com.nvl.api.common.Payload;
 
@@ -16,11 +16,11 @@ public class Expertise implements Payload, Comparable<Expertise> {
 
 	private static final long serialVersionUID = -4657411069876472590L;
 
-	private List<Competency> competencies;
 	private ExpertiseType expertiseType;
+	private List<Competency> competencies;
 
 	public List<Competency> getCompetencies() {
-		return competencies;
+		return competencies.stream().sorted().collect(Collectors.toList());
 	}
 
 	public void setCompetencies(List<Competency> aCompetencies) {

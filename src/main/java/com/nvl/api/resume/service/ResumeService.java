@@ -37,7 +37,7 @@ public class ResumeService implements IResumeService {
 		/* Add Professional information */
 		Experience experience = new Experience.Builder().summary(
 				"Worked on all application life cycle phases focussed on JEE server side, modern web client side with Angular Typescript in domains including finance, automation and telecommunications")
-				.skills(professionalService.getExpertises()).build();
+				.expertises(professionalService.getExpertises()).build();
 		resume.setExperience(experience);
 
 		return resume;
