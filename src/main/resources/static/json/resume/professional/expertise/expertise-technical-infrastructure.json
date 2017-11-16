@@ -24,6 +24,24 @@
 		},
 		{
 			"skill": {
+				"code": "IN_Servers",
+				"description": "JBoss AS, Tomcat, Jetty"
+			},
+			"level": {
+				"description": "high"
+			}
+		},
+		{
+			"skill": {
+				"code": "IN_DBMS",
+				"description": "PostgreSQL, H2, MySQL"
+			},
+			"level": {
+				"description": "high"
+			}
+		},
+		{
+			"skill": {
 				"code": "IN_NODE",
 				"description": "Nodejs node package manager"
 			},

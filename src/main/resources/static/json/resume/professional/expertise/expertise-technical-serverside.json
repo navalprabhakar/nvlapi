@@ -15,8 +15,89 @@
 		},
 		{
 			"skill": {
+				"code": "JV_CORE_MT",
+				"description": "Java multithreading advanced"
+			},
+			"level": {
+				"description": "high"
+			}
+		},
+		{
+			"skill": {
 				"code": "JV_EE_SRV_JSP",
 				"description": "Java enterprise servlet/jsp"
+			},
+			"level": {
+				"description": "expert"
+			}
+		},
+		{
+			"skill": {
+				"code": "JV_EE_SPRING_1",
+				"description": "Spring Core/MVC"
+			},
+			"level": {
+				"description": "expert"
+			}
+		},
+		{
+			"skill": {
+				"code": "JV_EE_SPRING_2",
+				"description": "Spring Rest/Boot"
+			},
+			"level": {
+				"description": "expert"
+			}
+		},
+		{
+			"skill": {
+				"code": "JV_ORM_JPA_HBM",
+				"description": "ORM JPA Hibernate"
+			},
+			"level": {
+				"description": "expert"
+			}
+		},
+		{
+			"skill": {
+				"code": "JV_LOGGING",
+				"description": "logback"
+			},
+			"level": {
+				"description": "high"
+			}
+		},
+		{
+			"skill": {
+				"code": "JV_EE_EJB_3",
+				"description": "Enterprise Javabeans 3"
+			},
+			"level": {
+				"description": "good"
+			}
+		},
+		{
+			"skill": {
+				"code": "JV_EE_JMS",
+				"description": "Java Messaging/Queuing-JMS HornetQ"
+			},
+			"level": {
+				"description": "good"
+			}
+		},
+		{
+			"skill": {
+				"code": "JV_EE_SCHED",
+				"description": "Quartz Scheduling"
+			},
+			"level": {
+				"description": "good"
+			}
+		},
+		{
+			"skill": {
+				"code": "JV_EE_DATA",
+				"description": "XML, DTD/XSD, JSON"
 			},
 			"level": {
 				"description": "expert"
