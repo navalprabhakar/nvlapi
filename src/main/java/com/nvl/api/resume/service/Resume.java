@@ -23,8 +23,8 @@ public class Resume implements Payload {
 	private String mission;
 	private List<String> milestonesToGo;
 	private List<String> milestonesSeen;
-	private Education education;
 	private Experience experience;
+	private Education education;
 
 	public Candidate getCandidate() {
 		return candidate;

@@ -26,20 +26,11 @@ public class ResumeService implements IResumeService {
 
 	@Override
 	public Resume getResume() {
-		/* Add Personal end Educational information */
-		Candidate candidate = personalService.getCandidate();
-		Education education = personalService.getEducation();
-
 		Resume resume = read(Resume.class, staticJsonResume);
-		resume.setCandidate(candidate);
-		resume.setEducation(education);
 
-		/* Add Professional information */
-		Experience experience = new Experience.Builder().summary(
-				"Worked on all application life cycle phases focussed on JEE server side, modern web client side with Angular Typescript in domains including finance, automation and telecommunications")
-				.expertises(professionalService.getExpertises()).build();
-		resume.setExperience(experience);
-
+		resume.setCandidate(personalService.getCandidate());
+		resume.setExperience(professionalService.getExperience());
+		resume.setEducation(personalService.getEducation());
 		return resume;
 	}
 

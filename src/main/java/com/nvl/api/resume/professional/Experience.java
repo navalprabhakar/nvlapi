@@ -16,8 +16,8 @@ public class Experience implements Payload {
 
 	private static final long serialVersionUID = -4512614827273210245L;
 
-	private List<Expertise> expertises;
 	private String summary;
+	private List<Expertise> expertises;
 
 	public List<Expertise> getExpertises() {
 		return expertises;
