@@ -5,6 +5,7 @@
 package com.nvl.api.resume.professional;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,7 +24,7 @@ import com.nvl.api.resume.professional.expertise.IExpertiseService;
 public class ProfessionalService implements IProfessionalService {
 
 	private static final LocalDate START_DATE = LocalDate.of(2009, 12, 07);
-	private static final String PLACEHOLDER_EXPERIENCE_DATE = "<EXPERIENCE_DATE>";
+	private static final String PLACEHOLDER_EXPERIENCE_PERIOD = "<EXPERIENCE-PERIOD>";
 
 	@Value("https://raw.githubusercontent.com/navalprabhakar/nvlapi"
 			+ "/master/src/main/resources/static/json/resume/professional/experience.json")
@@ -39,14 +40,15 @@ public class ProfessionalService implements IProfessionalService {
 
 	@Override
 	public String getExperienceDuration() {
-		return LocalDate.now().until(START_DATE).toString();
+		Period period = START_DATE.until(LocalDate.now());
+		return period.getYears() + " Years " + period.getMonths() + " months";
 	}
 
 	@Override
 	public Experience getExperience() {
 		Experience experience = read(Experience.class, staticJsonExperience);
 		experience
-				.setSummary(experience.getSummary().replaceFirst(PLACEHOLDER_EXPERIENCE_DATE, getExperienceDuration()));
+				.setSummary(experience.getSummary().replaceFirst(PLACEHOLDER_EXPERIENCE_PERIOD, getExperienceDuration()));
 		experience.setExpertises(getExpertises());
 		return experience;
 	}
